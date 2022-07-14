@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var characterName = "Luke SKYWALKER"
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Text(characterName)
+                .font(.largeTitle)
+                .padding()
+            Button {
+                self.characterName = "Yoda"
+            } label: {
+                Text("Change Character")
+            }
+        }
     }
 }
 
