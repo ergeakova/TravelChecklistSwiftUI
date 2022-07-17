@@ -14,9 +14,9 @@ struct TravelListView: View {
                 Text(travel.name)
                 Text("-")
                 Text(travel.description)
+                NavigationLink(destination: TravelDetailView(chosenTravel: travel)){}
             }
-            
-        }
+        }.navigationBarTitle("Travel List")
     }
 }
 
